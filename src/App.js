@@ -31,6 +31,7 @@ const useCountTotal=(item)=>{
   }
   return {count,incCounter,decCounter,rndCounter,resetCounter};
 }
+
 const Counter = (props) => {
   const CountTotal=useCountTotal(props.counter);
   return (
@@ -65,6 +66,7 @@ const App = () => {
     console.log(returnRanNum().then(data=>data))
     firstValue.onChange(returnRanNum());
     secondValue.onChange(returnRanNum());
+    //Возвращаются одни промисы, так и не смог пофиксить
   },[]);
   console.log(firstValue.firstVal)
   return (
